@@ -15,10 +15,8 @@ import { TodoCreationParams, TodoService } from "./todoService";
 @Route("todo")
 export class TodoController extends Controller {
   @Get("{todoId}")
-  public async get  getTodo(
-    @Path() todoId: string
-  ){
+  public async getTodo(@Path() todoId: string) {
     let todoService = new TodoService();
-    return todoService.get(todoId)
+    return todoService.get(todoId);
   }
 }
