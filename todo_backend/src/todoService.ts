@@ -13,4 +13,13 @@ export class TodoService {
       done: false,
     };
   }
+  public create(todoCreationParams: TodoCreationParams): Todo {
+    console.log("mock_DB call");
+    return {
+      id: "1",
+      title: "mocked_todo",
+      description: "blaj blah",
+      done: false,
+    };
+  }
 }
